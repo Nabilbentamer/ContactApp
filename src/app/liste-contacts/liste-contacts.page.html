@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Liste des Contacts</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="container">
+  <div class="container_user" style="background-color: black">
+    <ion-item
+      *ngFor="let item of contacts"
+      (click)="detailsContact(item.email)"
+    >
+      <ion-thumbnail slot="start">
+        <ion-img
+          width="100"
+          height="80"
+          [src]="item.imageURL"
+          style="border-radius: 10px"
+        ></ion-img>
+      </ion-thumbnail>
+      <div class="user-info">
+        <ion-label class="name">{{item.nom}} {{item.prenom}}</ion-label>
+        <ion-label class="phone">Tel : {{item.tel}}</ion-label>
+        <ion-label class="service"
+          ><br />
+          Service : {{item.service}}</ion-label
+        >
+      </div>
+    </ion-item>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="ajouterContact()">
+      <ion-icon name="add-circle-outline" end right></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

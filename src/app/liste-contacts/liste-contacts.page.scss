@@ -1,0 +1,24 @@
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 14px;
+}
+.phone {
+  margin-top: 8px;
+}
+.service {
+  margin-bottom: 8px;
+}
+.container {
+  background-color: gray;
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.container_user {
+  border-width: 4px;
+  border-color: black;
+}

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" *ngIf="compte">
+  <div
+    style="
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-top: 20px;
+    "
+  >
+    <ion-img
+      style="width: 100px; height: 80px; border-radius: 50%"
+      src="../../assets/images/user4.jpg"
+    ></ion-img>
+  </div>
+  <ion-item>
+    <ion-label>Nom</ion-label>
+    <ion-input type="text" value="{{compte.nom}}" disabled="true"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Prenom</ion-label>
+    <ion-input type="text" value="{{compte.prenom}}" disabled="true">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Email</ion-label>
+    <ion-input type="email" value="{{compte.email}}" disabled="true">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Tel</ion-label>
+    <ion-input type="Tel" value="{{compte.tel}}" disabled="true"> </ion-input>
+  </ion-item>
+  <ion-button expand="block" fill="outline" style="margin-top: 20px"
+    >Modifier</ion-button
+  >
+</ion-content>

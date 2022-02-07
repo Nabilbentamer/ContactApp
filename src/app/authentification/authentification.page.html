@@ -1,0 +1,50 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- <ion-title>login</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class="ion-no-margin">
+    <ion-img src="assets/images/header.png"></ion-img>
+    <ion-card-header>
+      <ion-card-title> Welcome </ion-card-title>
+      <ion-card-subtitle class="ion-text-lowercase">
+        Login to Continue using the App
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <form [formGroup]="authForm" (ngSubmit)="singIn()">
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> Password</ion-label>
+      <ion-input type="Password" formControlName="password"></ion-input>
+    </ion-item>
+    <ion-card-content>
+      <div class="signin-btns">
+        <ion-button
+          size="small"
+          fill="solid"
+          shape="round"
+          class="loginbtn"
+          type="submit"
+        >
+          Login
+        </ion-button>
+
+        <ion-button
+          size="small"
+          fill="outline"
+          shape="round"
+          color="black"
+          (click)="singUp()"
+          >Sign Up</ion-button
+        >
+      </div>
+    </ion-card-content>
+  </form>
+</ion-content>
